@@ -1,5 +1,5 @@
 :root {
-  --page: url("/./assets/media/background/full2.png");
+  --page: url("https://images.unsplash.com/photo-1580216322019-86665d337e34?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8b2NlYW4lMjBmaXNofGVufDB8fDB8fHww");
   --background: rgba(255, 255, 255, 0.02);
   --background-filter: blur(10px) brightness(80%);
   --background-secondary: #4545459e;
