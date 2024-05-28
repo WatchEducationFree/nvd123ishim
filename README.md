@@ -8,9 +8,12 @@
       <li>You are not allowed to use the service to view, watch, or listen to NSFW or NSFL (Not Safe For Life) content in any capacity</li>
       <li>You are not allowed to use the service to run malicious code on another website </li>
       <li>You are not allowed to abuse the service to "shut down" the servers</li>
-      <li>If you make a fork of the service you may not change any code.</li>
+      <li>If you make a fork of the service you may not change any code. The following are exceptions</li>
+       <ul>
+    <li>Adding apps, games, or tools</li>
+       </ul>
       <li><b>USING THE SERVICE TO ACCESS OTHERWISE ILLEGAL WEBSITES IS PROHIBITED</b></li>
-    <li>Any violation of the following terms will revoke your access to the service</li>
+      <li>Any violation of the following terms will revoke your access to the service</li>
     </ul>
     <h1>PRIVACY POLICY</h1>
     <p>While using the service you agree to the following data collection</p>
