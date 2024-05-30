@@ -1486,8 +1486,6 @@
     "link": "https://taming.io/",
     "image": "/assets/media/icons/tamingio.webp",
     "categories": ["all"],
-    "error": "true",
-    "say": "Taming.io is currently broken on the proxy and will crash Interstellar when attempted to load."
   },
   {
     "name": "Temple of Boom",
