@@ -5,8 +5,8 @@ try {
 } catch (e) {
   inFrame = true
 }
-
-if (!inFrame && !navigator.userAgent.includes("Firefox")) {
+if (!localStorage.getItem("ab")) localStorage.setItem("ab", true)
+if (!inFrame && !navigator.userAgent.includes("Firefox") && localStorage.getItem("ab") === "true") {
   const popup = open("about:blank", "_blank")
   if (!popup || popup.closed) {
     alert("Please allow popups and redirects.")
@@ -32,7 +32,7 @@ if (!inFrame && !navigator.userAgent.includes("Firefox")) {
     doc.head.appendChild(link)
     doc.body.appendChild(iframe)
 
-    const pLink = localStorage.getItem(encodeURI("pLink")) || "https://www.nasa.gov/"
+    const pLink = localStorage.getItem(encodeURI("pLink")) || getRandomURL()
     location.replace(pLink)
 
     const script = doc.createElement("script")
@@ -47,7 +47,7 @@ if (!inFrame && !navigator.userAgent.includes("Firefox")) {
   }
 }
 // Particles
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", (event) => {
   if (window.localStorage.getItem("Particles") === "true") {
     var particlesConfig = {
       particles: {
@@ -163,18 +163,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
   }
 })
 // Splash
-let SplashT = [
-  "Newest proxy server",
-  "Fastest proxy server",
+const SplashT = [
+  "Sub to nvd123 on YouTube",
+  "Request games or report bugs in settings (Google Form)",
   "Made by nvd123",
-  "Sub to my YT (@nvd123) :)",
-  "Thanks for using the site",
-  "Don't get in trouble lol",
+  "Follow @nvd123YT on Twitter",
+  "First private browser-in-browser",
+  "#1 rated private browser-in-browser for gaming",
   "The world is yours",
-  "Have fun",
+  "GitHub https://github.com/interstellarforker/nvd123ishim",
   "Check out the settings page",
-  "Turn off ads if you want",
-  "Follow my Twitter(@nvd123YT)",
+  "DM me on Discord (@nvd123YT)",
 ]
 
 let SplashI = Math.floor(Math.random() * SplashT.length)
@@ -188,3 +187,21 @@ function US() {
 SplashE.innerText = SplashT[SplashI]
 
 SplashE.addEventListener("click", US)
+
+function getRandomURL() {
+  let randomURLS = [
+    "https://kahoot.it",
+    "https://classroom.google.com",
+    "https://drive.google.com",
+    "https://google.com",
+    "https://docs.google.com",
+    "https://slides.google.com",
+    "https://www.nasa.gov",
+    "https://blooket.com",
+  ]
+  return randomURLS[randRange(0, randomURLS.length)]
+}
+
+function randRange(min, max) {
+  return Math.floor(Math.random() * (max - min) + min)
+}
